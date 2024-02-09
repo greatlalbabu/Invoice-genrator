@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F3F7;
+}
+
+.invoice{
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+    gap: 3rem;
+}
+
+#input{
+    width: 60%;
+    height: 100vh;
+    border: 1px solid rgb(175, 171, 171);
+    margin-left: 6rem;
+    border-radius: 0.75rem;
+    background-color: white;
+
+}
+
+#btn{
+    border: 2px solid transparent;
+    background-color: rgb(52, 52, 241);
+    color: white;
+    padding: 0.65rem 6rem;
+    position: fixed;
+    font-size: 1rem;
+    border-radius: 0.65rem;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+    .invoice{
+        width: 100vw;
+        min-height: 100vh;
+        display:flex;
+        flex-direction: column;
+
+    }
+
+   
+    #btns{
+      padding: 1rem;
+      margin-left: 6rem;
+    }
+}
+
+
+.first{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.56rem 2rem;
+}
+
+input{
+    background-color: #F5F7F9;
+    padding: 0.65rem;
+    border: none;
+}
+
