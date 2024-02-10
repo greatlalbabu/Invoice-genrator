@@ -1,1 +1,1 @@
-console.log("hello");
+document.getElementById('cdate').textContent = new Date().toLocaleDateString();

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice Genrator Geekathon Project 2024</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +13,10 @@
          <div id="input">
               <div class="first">
                 <div class="date">
-                    <label for="current-date">Current Date:</label>
-                    <br><br>
+                  <p><span>Current Date: </span><span id="cdate"></span></p>
+
+                    <!-- <label for="current-date"><span>Current Date:</span> 3/09/2024</label> -->
+                    <br>
                     <label for="due-date">Due Date:</label>
                      <input type="date" name="due-date" id="dates">
                      
@@ -22,7 +26,91 @@
                    <input style="width: 60px" type="number" >
                 </div>
               </div>
-              <hr style="color: red; margin: 0 1rem;">
+              <hr style="color: red; margin: 0 2rem;">
+           <div class="bill-info">
+               <div class="bill-to">
+                  <h4>Bill to:</h4>
+
+                  <input type="text" name="bill" id="bill" placeholder="Who is this invoice to?">
+                  <br><br>
+                  <input type="email" name="email" id="bill" placeholder="Email address">
+                  <br><br>
+
+                  <input type="text" name="bill" id="bill" placeholder="Billing address">
+
+
+               </div>
+               <div class="bill-from">
+                  <h4>Bill from:</h4>
+                  <input type="text" name="bill" id="bill" placeholder="Who is this invoice from?">
+                  <br><br>
+
+                  <input type="email" name="email" id="bill" placeholder="Email address">
+                  <br><br>
+
+                  <input type="text" name="bill" id="bill" placeholder="Billing address">
+
+               </div>
+
+           </div>   
+           <hr style="color: red; margin: 0 2rem;">
+          <!-- <div id="table-data">
+            <table class="table">
+               <thead>
+                  <tr>
+                  <th>ITEM</th>
+                  <th>QTY</th>
+                  <th>PRICE/RATE</th>
+                  <th>Action</th>
+               </tr>
+
+               </thead>
+            </table>
+          </div> -->
+          <div class="invoice-body">
+            <table>
+                <thead>
+                    <th style="padding-left:6px;">ITEM</th>
+                    <th>QTY</th>
+                    <th>PRICE/Rate</th>
+                    <th style="text-align: right;">ACTION</th>
+                </thead>
+  
+                <tbody id="table-body">
+                <tr class="single-row">
+                    <td><input type="text" placeholder="Product name" class="product left"></td>
+                    <td><input type="number" placeholder="0" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="price" class="price" id="price" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                    <td style="text-align: right;"><span class="material-icons">delete_outline</span></td>
+                </tr>
+  
+                <tr style="padding-left: 20px">
+                    <td class="dashed "><div class="float">
+                        <a href="#" class="float" id="add-row">
+                            <span class="material-icons plus">add</span>
+                        </a>
+                    </div>
+                </td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                </tr>
+            </tbody>
+            </table>
+            <div id="sum"><input type="text" placeholder="0.00" name="total" class="total" id="total" disabled></div>
+  
+        </div>
+  
+
+
+
+
+
+
+
+            
          </div>
          <hr>
          <div id="btns">
