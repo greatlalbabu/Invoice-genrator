@@ -7,7 +7,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     background-color: #F2F3F7;
 }
 
@@ -15,13 +15,13 @@ body{
     display: flex;
     padding: 1rem;
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     gap: 3rem;
 }
 
 #input{
     width: 60%;
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid rgb(175, 171, 171);
     margin-left: 6rem;
     border-radius: 0.75rem;
@@ -67,9 +67,9 @@ body{
     padding: 1.56rem 2rem;
 }
 
-input{
+#number{
     background-color: #F5F7F9;
-    padding: 0.56rem;
+    padding: 0.6rem;
     border: none;
 }
 
@@ -77,24 +77,44 @@ input{
 
 .bill-info{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.55rem;
-    padding: 1.56rem 2rem 5rem 0.65rem; 
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    /* margin-left: 2rem; */
+    justify-content: space-evenly;
     
 }
+
 
 h4{
     font-size: 1rem;
     padding: 0.56rem;
 }
 
-#bill{
-    
-    background-color: #F5F7F9;
-    padding: 0.56rem 9rem 0.56rem 0.56rem;
+#name{
+    width: 300px;
+   background-color: #F5F7F9;
+   padding: 0.56rem;
+    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
     border: none;
-   
+}
+
+#email{
+    width: 300px;
+   background-color: #F5F7F9;
+   padding: 0.56rem;
+    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+    border: none;
+}
+ 
+
+
+ #address{
+    width: 300px;
+   background-color: #F5F7F9;
+   padding: 0.56rem;
+    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+    border: none;
 }
 
 input:focus{
@@ -121,4 +141,91 @@ label{
 .material-icons {
     cursor: pointer;
   }
+
+#item-info{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    
+  }
+
+
+  thead{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    line-height: 2rem;
+  }
+
+  tr{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  #Description{
+    padding-right: 15rem;
+  }
+
+  .items{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  #item{
+    border: none;
+    margin-left: 1rem;
+    padding: 0.50rem 5rem 0.65rem 0.15rem;
+    background-color: #F5F7F9;
+
+
+  }
+
+  #qt{
+    margin-left: 6rem;
+    display: flex;
+    gap: 3rem;
+
+  }
+
+  #qty{
+    width: 60px;
+    background-color: #F5F7F9;
+    border: none;
+
+  }
+
+  #price{
+    width: 70px;
+    background-color: #F5F7F9;
+    border: none;
+  }
+
+  #buttons{
+    padding: 0.56rem 2rem;
+    background-color: rgb(153, 153, 241);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+ 
+#add-item{
+    margin-left: 2rem;
+    padding: 0.56rem;
+    color: #F2F3F7;
+    background-color: #0D6EFD;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.total{
+    padding: 1rem 6rem;
+    text-align: right;
+}
+
+
+
+
 
