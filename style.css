@@ -295,9 +295,80 @@ label{
 
 
 
+@media only screen and (max-width: 390px) {
+  body {
+      font-size: 14px; /* Adjust the font size for smaller screens if needed */
+  }
+
+  .invoice {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      margin-left: 1rem; /* Adjust margin for better spacing on smaller screens */
+  }
+
+  #input {
+      width: 100%; /* Full width on smaller screens */
+      margin-left: 0; /* No margin on the left for full width */
+  }
+
+  #btn {
+      padding: 0.5rem 2rem; /* Adjust button padding for better appearance on smaller screens */
+  }
+
+  .bill-info {
+      padding: 1rem 0; /* Adjust padding for better spacing on smaller screens */
+  }
+
+  #number, #invoicenumber {
+      width: 100%; /* Full width for date and invoice number inputs on smaller screens */
+  }
+
+  h4, label, p {
+      font-size: 16px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .table, .product-data {
+      width: 100%; /* Full width for table and product data on smaller screens */
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  #Description {
+    padding-right: 8px; /* Adjust as needed for better spacing */
+  }
+
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #qt {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #qty,
+  #price {
+    width: 100%;
+  }
+
+  #buttons {
+    margin-top: 1rem; /* Adjust as needed for better spacing */
+  }
+
+  #add-item {
+    margin-left: 0;
+    margin-top: 1rem; /* Adjust as needed for better spacing */
+  }
+
+  .total {
+    padding: 1rem;
+    text-align: center;
+  }
 
 
-
-
-
-
+}
