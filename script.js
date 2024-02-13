@@ -89,18 +89,82 @@ function validateInputs() {
 
 
 // Function to generate and download the invoice
+// function downloadInvoice() {
+
+//     var invoiceContent = "index.html";
+//     var blob = new Blob([invoiceContent], { type: "text/html" });
+//     var link = document.createElement("a");
+
+// // when download with file name
+//     link.download = "invoice.html";
+//     link.href = window.URL.createObjectURL(blob);
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+// }
+
+
+// Function to generate and download the invoice as PDF
 function downloadInvoice() {
+    // Check if all required inputs are filled
+    if (!validateInputs()) {
+        alert("Please fill in all required fields before downloading the invoice.");
+        return;
+    }
 
-    var invoiceContent = "index.html";
-    var blob = new Blob([invoiceContent], { type: "text/html" });
-    var link = document.createElement("a");
+    // Get the content of the invoice
+    var invoiceContent = buildInvoiceContent();
 
-// when download with file name
-    link.download = "invoice.html";
-    link.href = window.URL.createObjectURL(blob);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Convert the HTML content to PDF using html2pdf.js
+    html2pdf(invoiceContent, {
+        margin: 10,
+        filename: 'invoice.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    });
 }
+
+
+function buildInvoiceContent() {
+    var currentDate = document.getElementById("cdate").textContent;
+    var dueDate = document.getElementById("number").value;
+    var invoiceNumber = document.getElementById("number").value;
+
+   
+    var invoiceContent = `
+        <div class="invoice">
+            <!-- Your HTML content here, use the variables as needed -->
+            <h2>Invoice</h2>
+            <p>Current Date: ${currentDate}</p>
+            <p>Due Date: ${dueDate}</p>
+            <p>Invoice Number: ${invoiceNumber}</p>
+            <!-- Add other invoice details based on your needs -->
+
+            <!-- Items table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th id="Description" scope="col">Description</th> 
+                        <th scope="col">Quantity</th> 
+                        <th scope="col">Price/Rate</th> 
+                        <th scope="col">Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ... (Add items table content) -->
+                </tbody>
+            </table>
+
+            <!-- Total -->
+            <div class="total">
+                <p>Total: <span>${document.getElementById("ntotal").textContent}</span></p>
+            </div>
+        </div>
+    `;
+
+    return invoiceContent;
+}
+
 
 
