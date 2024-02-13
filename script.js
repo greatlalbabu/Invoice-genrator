@@ -126,10 +126,20 @@ function downloadInvoice() {
 }
 
 
-function buildInvoiceContent() {
-    var currentDate = document.getElementById("cdate").textContent;
-    var dueDate = document.getElementById("number").value;
-    var invoiceNumber = document.getElementById("number").value;
+
+    function buildInvoiceContent() {
+        // Retrieve and customize the invoice content based on your needs
+        var currentDate = document.getElementById("cdate").textContent;
+        var dueDate = document.getElementById("number").value;
+        var invoiceNumber = document.getElementById("number").value;
+    
+        var billToName = document.getElementById("name").value;
+        var billToEmail = document.getElementById("email").value;
+        var billToAddress = document.getElementById("address").value;
+    
+        var billFromName = document.getElementById("name").value;
+        var billFromEmail = document.getElementById("email").value;
+        var billFromAddress = document.getElementById("address").value;
 
    
     var invoiceContent = `
