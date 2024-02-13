@@ -110,6 +110,12 @@ tr{
     
 }
 
+#invoicenumber{
+  background-color: #F5F7F9;
+    padding: 0.6rem;
+    border: none;
+}
+
 
 
 .bill-info{
@@ -136,12 +142,28 @@ h4{
     border: none;
 }
 
+#namefrom{
+  width: 300px;
+ background-color: #F5F7F9;
+ padding: 0.56rem;
+  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+  border: none;
+}
+
 #email{
     width: 300px;
    background-color: #F5F7F9;
    padding: 0.56rem;
     /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
     border: none;
+}
+
+#emailfrom{
+  width: 300px;
+ background-color: #F5F7F9;
+ padding: 0.56rem;
+  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+  border: none;
 }
  
 
@@ -152,6 +174,14 @@ h4{
    padding: 0.56rem;
     /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
     border: none;
+}
+
+#addressfrom{
+  width: 300px;
+ background-color: #F5F7F9;
+ padding: 0.56rem;
+  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+  border: none;
 }
 
 input:focus{
@@ -259,6 +289,13 @@ label{
     padding: 1rem 6rem;
     text-align: right;
 }
+
+
+
+
+
+
+
 
 
 

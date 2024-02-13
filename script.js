@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         addNewItem();
     });
 
-    
     document.querySelector(".product-data").addEventListener("click", function (event) {
         if (event.target && event.target.id === "buttons") {
             removeItem(event.target.closest(".items"));
@@ -26,8 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function addNewItem() {
     var newItemContainer = document.querySelector(".items").cloneNode(true);
-
-    // Clear the input values in the new container
     newItemContainer.querySelector("#item").value = "";
     newItemContainer.querySelector("#qty").value = "";
     newItemContainer.querySelector("#price").value = "";
@@ -35,7 +32,7 @@ function addNewItem() {
     document.querySelector(".product-data").appendChild(newItemContainer);
 }
 
-// remove
+// remove button function 
 function removeItem(itemContainer) {
     // Remove the item container from the product data container
     itemContainer.parentNode.removeChild(itemContainer);
@@ -81,41 +78,17 @@ function validateInputs() {
 }
 
 
-
-
-
-
-
-
-
-// Function to generate and download the invoice
-// function downloadInvoice() {
-
-//     var invoiceContent = "index.html";
-//     var blob = new Blob([invoiceContent], { type: "text/html" });
-//     var link = document.createElement("a");
-
-// // when download with file name
-//     link.download = "invoice.html";
-//     link.href = window.URL.createObjectURL(blob);
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-// }
-
-
 // Function to generate and download the invoice as PDF
 function downloadInvoice() {
-    // Check if all required inputs are filled
+   
     if (!validateInputs()) {
         alert("Please fill in all required fields before downloading the invoice.");
         return;
     }
 
-    // Get the content of the invoice
     var invoiceContent = buildInvoiceContent();
 
-    // Convert the HTML content to PDF using html2pdf.js
+  
     html2pdf(invoiceContent, {
         margin: 10,
         filename: 'invoice.pdf',
@@ -127,44 +100,75 @@ function downloadInvoice() {
 
 
 
-    function buildInvoiceContent() {
-        // Retrieve and customize the invoice content based on your needs
-        var currentDate = document.getElementById("cdate").textContent;
-        var dueDate = document.getElementById("number").value;
-        var invoiceNumber = document.getElementById("number").value;
-    
-        var billToName = document.getElementById("name").value;
-        var billToEmail = document.getElementById("email").value;
-        var billToAddress = document.getElementById("address").value;
-    
-        var billFromName = document.getElementById("name").value;
-        var billFromEmail = document.getElementById("email").value;
-        var billFromAddress = document.getElementById("address").value;
+function buildInvoiceContent() {
+    var currentDate = document.getElementById("cdate").textContent;
+    var dueDate = document.getElementById("number").value;
+    var invoiceNumber = document.getElementById("invoicenumber").value;
 
-   
+    var billToName = document.getElementById("name").value;
+    var billToEmail = document.getElementById("email").value;
+    var billToAddress = document.getElementById("address").value;
+
+    var billFromName = document.getElementById("namefrom").value;
+    var billFromEmail = document.getElementById("emailfrom").value;
+    var billFromAddress = document.getElementById("addressfrom").value;
+
+    var items = document.querySelectorAll(".items");
+    
+    var itemsContent = "";
+    items.forEach(function (item) {
+        var itemName = item.querySelector("#item").value;
+        var itemQty = item.querySelector("#qty").value;
+        var itemPrice = item.querySelector("#price").value;
+
+        itemsContent += `
+            <tr>
+                <td>${itemName}</td>
+                <td>${itemQty}</td>
+                <td>${itemPrice}</td>
+            </tr>
+        `;
+    });
+
+    
     var invoiceContent = `
-        <div class="invoice">
-            <!-- Your HTML content here, use the variables as needed -->
+        <div class="invoice-container">
             <h2>Invoice</h2>
             <p>Current Date: ${currentDate}</p>
             <p>Due Date: ${dueDate}</p>
             <p>Invoice Number: ${invoiceNumber}</p>
-            <!-- Add other invoice details based on your needs -->
+
+            <!-- Bill information -->
+            <div class="bill-info">
+                <div class="bill-to">
+                    <h4>Bill to:</h4>
+                    <p>${billToName}</p>
+                    <p>${billToEmail}</p>
+                    <p>${billToAddress}</p>
+                </div>
+                <div class="bill-from">
+                    <h4>Bill from:</h4>
+                    <p>${billFromName}</p>
+                    <p>${billFromEmail}</p>
+                    <p>${billFromAddress}</p>
+                </div>
+            </div>
 
             <!-- Items table -->
             <table class="table">
                 <thead>
                     <tr>
                         <th id="Description" scope="col">Description</th> 
-                        <th scope="col">Quantity</th> 
+                        <th style="margin-right=2rem;" scope="col">Quantity</th> 
                         <th scope="col">Price/Rate</th> 
-                        <th scope="col">Action</th> 
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- ... (Add items table content) -->
+                    ${itemsContent}
                 </tbody>
             </table>
+            
 
             <!-- Total -->
             <div class="total">
