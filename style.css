@@ -1,92 +1,92 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    width: 100%;
-    min-height: 100%;
-    background-color: #F2F3F7;
+  width: 100%;
+  min-height: 100%;
+  background-color: #F2F3F7;
 }
 
 .invoice{
-    display: flex;
-    padding: 1rem;
-    width: 100%;
-    min-height: 100%;
-    gap: 3rem;
-    position: relative;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  min-height: 100%;
+  gap: 3rem;
+  position: relative;
 
 }
 
 #input{
-    width: 60%;
-    min-height: 100vh;
-    border: 1px solid rgb(175, 171, 171);
-    margin-left: 6rem;
-    border-radius: 0.75rem;
-    background-color: white;
+  width: 60%;
+  min-height: 100vh;
+  border: 1px solid rgb(175, 171, 171);
+  margin-left: 6rem;
+  border-radius: 0.75rem;
+  background-color: white;
 
 }
 
 #btn{
-    border: 2px solid transparent;
-    background-color: rgb(52, 52, 241);
-    color: white;
-    padding: 0.65rem 6rem;
-    position: fixed;
-    font-size: 1rem;
-    border-radius: 0.65rem;
-    cursor: pointer;
+  border: 2px solid transparent;
+  background-color: rgb(52, 52, 241);
+  color: white;
+  padding: 0.65rem 6rem;
+  position: fixed;
+  font-size: 1rem;
+  border-radius: 0.65rem;
+  cursor: pointer;
 }
 
 #btn:hover{
-    background-color: blue;
+  background-color: blue;
 }
 
 @media only screen and (max-width: 600px) {
+
+  .invoice{
+      width: 100%;
+      min-height: 100%;       
+      flex-wrap: wrap;
   
-    .invoice{
-        width: 100%;
-        min-height: 100%;       
-        flex-wrap: wrap;
-    
-    }
+  }
+
+
+
+
+
+ 
+
 
   
-
-  
-
-   
-
-
-    
 .bill-info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-  padding: 0 2rem;
-  padding-bottom: 5rem;
-  /* margin-left: 2rem; */
-  justify-content: space-evenly;
-  
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 1rem;
+padding: 0 2rem;
+padding-bottom: 5rem;
+/* margin-left: 2rem; */
+justify-content: space-evenly;
+
 }
 
 tr{
-  flex-direction: column;
-  text-align: left;
+flex-direction: column;
+text-align: left;
 }
 
 .items{
-  flex-wrap: wrap;
-  
+flex-wrap: wrap;
+
 }
 
 #qt{
-  flex-wrap: wrap;
+flex-wrap: wrap;
 }
 
 
@@ -97,197 +97,197 @@ tr{
 
 
 .first{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.56rem 2rem;
-    
+  display: flex;
+  justify-content: space-between;
+  padding: 1.56rem 2rem;
+  
 }
 
 #number{
-    background-color: #F5F7F9;
-    padding: 0.6rem;
-    border: none;
-    
+  background-color: #F5F7F9;
+  padding: 0.6rem;
+  border: none;
+  
 }
 
 #invoicenumber{
-  background-color: #F5F7F9;
-    padding: 0.6rem;
-    border: none;
+background-color: #F5F7F9;
+  padding: 0.6rem;
+  border: none;
 }
 
 
 
 .bill-info{
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-    /* margin-left: 2rem; */
-    justify-content: space-evenly;
-    
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  /* margin-left: 2rem; */
+  justify-content: space-evenly;
+  
 }
 
 
 h4{
-    font-size: 1rem;
-    padding: 0.56rem;
+  font-size: 1rem;
+  padding: 0.56rem;
 }
 
 #name{
-    width: 300px;
-   background-color: #F5F7F9;
-   padding: 0.56rem;
-    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
-    border: none;
+  width: 300px;
+ background-color: #F5F7F9;
+ padding: 0.56rem;
+  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+  border: none;
 }
 
 #namefrom{
-  width: 300px;
- background-color: #F5F7F9;
- padding: 0.56rem;
-  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
-  border: none;
+width: 300px;
+background-color: #F5F7F9;
+padding: 0.56rem;
+/* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+border: none;
 }
 
 #email{
-    width: 300px;
-   background-color: #F5F7F9;
-   padding: 0.56rem;
-    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
-    border: none;
+  width: 300px;
+ background-color: #F5F7F9;
+ padding: 0.56rem;
+  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+  border: none;
 }
 
 #emailfrom{
+width: 300px;
+background-color: #F5F7F9;
+padding: 0.56rem;
+/* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+border: none;
+}
+
+
+
+#address{
   width: 300px;
  background-color: #F5F7F9;
  padding: 0.56rem;
   /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
   border: none;
-}
- 
-
-
- #address{
-    width: 300px;
-   background-color: #F5F7F9;
-   padding: 0.56rem;
-    /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
-    border: none;
 }
 
 #addressfrom{
-  width: 300px;
- background-color: #F5F7F9;
- padding: 0.56rem;
-  /* padding: 0.56rem 10rem 0.56rem 0.56rem; */
-  border: none;
+width: 300px;
+background-color: #F5F7F9;
+padding: 0.56rem;
+/* padding: 0.56rem 10rem 0.56rem 0.56rem; */
+border: none;
 }
 
 input:focus{
-    border: none;
-    outline: 3px solid rgba(131, 207, 191, 0.65);
-    border-radius: 1px;
+  border: none;
+  outline: 3px solid rgba(131, 207, 191, 0.65);
+  border-radius: 1px;
 }
 
 p{
-    font-weight: 500; 
-    font-size: 18px;
+  font-weight: 500; 
+  font-size: 18px;
 }
 
 #cdate{
-    font-weight: 200;
-    font-size: 15px;
+  font-weight: 200;
+  font-size: 15px;
 }
 label{
-    font-weight: 500; 
-    font-size: 18px;
+  font-weight: 500; 
+  font-size: 18px;
 }
 
 
 
 
 #item-info{
-    display: flex;
-    padding: 2rem;
-    justify-content: space-between;
-    
-  }
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  
+}
 
 
-  thead{
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 2rem;
-    line-height: 2rem;
-  }
+thead{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+  line-height: 2rem;
+}
 
-  tr{
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
+tr{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-  #Description{
-    padding-right: 15rem;
-  }
+#Description{
+  padding-right: 15rem;
+}
 
-  .items{
-    display: flex;
-    padding: 1rem;
-    gap: 1rem;
-  }
+.items{
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
 
-  #item{
-    border: none;
-    margin-left: 1rem;
-    padding: 0.50rem 5rem 0.65rem 0.15rem;
-    background-color: #F5F7F9;
+#item{
+  border: none;
+  margin-left: 1rem;
+  padding: 0.50rem 5rem 0.65rem 0.15rem;
+  background-color: #F5F7F9;
 
 
-  }
+}
 
-  #qt{
-    margin-left: 6rem;
-    display: flex;
-    gap: 3rem;
+#qt{
+  margin-left: 6rem;
+  display: flex;
+  gap: 3rem;
 
-  }
+}
 
-  #qty{
-    width: 60px;
-    background-color: #F5F7F9;
-    border: none;
+#qty{
+  width: 60px;
+  background-color: #F5F7F9;
+  border: none;
 
-  }
+}
 
-  #price{
-    width: 70px;
-    background-color: #F5F7F9;
-    border: none;
-  }
+#price{
+  width: 70px;
+  background-color: #F5F7F9;
+  border: none;
+}
 
-  #buttons{
-    padding: 0.56rem 2rem;
-    background-color: rgb(240, 57, 148);
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-  }
- 
+#buttons{
+  padding: 0.56rem 2rem;
+  background-color: rgb(240, 57, 148);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
 #add-item{
-    margin-left: 2rem;
-    padding: 0.56rem;
-    color: #F2F3F7;
-    background-color: #0D6EFD;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
+  margin-left: 2rem;
+  padding: 0.56rem;
+  color: #F2F3F7;
+  background-color: #0D6EFD;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 .total{
-    padding: 1rem 6rem;
-    text-align: right;
+  padding: 1rem 6rem;
+  text-align: right;
 }
 
 
@@ -296,79 +296,79 @@ label{
 
 
 @media only screen and (max-width: 390px) {
-  body {
-      font-size: 14px; /* Adjust the font size for smaller screens if needed */
-  }
+body {
+    font-size: 14px; 
+}
 
-  .invoice {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-      margin-left: 1rem; /* Adjust margin for better spacing on smaller screens */
-  }
+.invoice {
+    flex-direction: column; 
+    margin-left: 1rem; 
+}
 
-  #input {
-      width: 100%; /* Full width on smaller screens */
-      margin-left: 0; /* No margin on the left for full width */
-  }
+#input {
+    width: 100%; 
+    margin-left: 0; 
+}
 
-  #btn {
-      padding: 0.5rem 2rem; /* Adjust button padding for better appearance on smaller screens */
-  }
+#btn {
+    padding: 0.5rem 2rem; 
+}
 
-  .bill-info {
-      padding: 1rem 0; /* Adjust padding for better spacing on smaller screens */
-  }
+.bill-info {
+    padding: 1rem 0; 
+}
 
-  #number, #invoicenumber {
-      width: 100%; /* Full width for date and invoice number inputs on smaller screens */
-  }
+#number, #invoicenumber {
+    width: 100%; 
+}
 
-  h4, label, p {
-      font-size: 16px; /* Adjust font size for better readability on smaller screens */
-  }
+h4, label, p {
+    font-size: 16px; 
+}
 
-  .table, .product-data {
-      width: 100%; /* Full width for table and product data on smaller screens */
-  }
+.table, .product-data {
+    width: 100%; 
+}
 
-  .table {
-    width: 100%;
-  }
+.table {
+  width: 100%;
+}
 
-  #Description {
-    padding-right: 8px; /* Adjust as needed for better spacing */
-  }
+#Description {
+  padding-right: 8px; 
+}
 
-  .items {
-    flex-direction: column;
-    align-items: center;
-  }
+.items {
+  flex-direction: column;
+  align-items: center;
+}
 
-  #qt {
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
+#qt {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
-  #qty,
-  #price {
-    width: 100%;
-  }
+#qty,
+#price {
+  width: 100%;
+}
 
-  #buttons {
-    margin-top: 1rem; /* Adjust as needed for better spacing */
-  }
+#buttons {
+  margin-top: 1rem; 
+}
 
-  #add-item {
-    margin-left: 0;
-    margin-top: 1rem; /* Adjust as needed for better spacing */
-  }
+#add-item {
+  margin-left: 0;
+  margin-top: 1rem; 
+}
 
-  .total {
-    padding: 1rem;
-    text-align: center;
-  }
+.total {
+  padding: 1rem;
+  text-align: center;
+}
 
 
 }
